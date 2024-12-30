@@ -3,8 +3,17 @@
 import "@/styles/globals.css"
 import { Inter } from "next/font/google"
 import { PageLayout } from "@/components/page-layout"
+import { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Leeor Nahum",
+  description: "Electrical and Computer Engineer | Software Developer | Entrepreneur",
+  icons: {
+    icon: "/favicon.ico",
+  },
+}
 
 export default function RootLayout({
   children,
