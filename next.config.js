@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/leeornahum.com',
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github-readme-stats.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-streak-stats.herokuapp.com',
+      },
+    ],
   },
-  assetPrefix: '/leeornahum.com/',
-  trailingSlash: true,
 }
 
 module.exports = nextConfig 
