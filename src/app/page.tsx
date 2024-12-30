@@ -28,7 +28,7 @@ export default function Home() {
             icon={Mail}
             title="Gmail"
             buttonText="Send Email"
-            link="mailto:leeor.nahum@gmail.com"
+            link="mailto:leeornahum@gmail.com"
             color="#EA4335"
             bgColor="#EA4335"
             lightBgColor="#EA433520"
@@ -46,7 +46,7 @@ export default function Home() {
             icon={Mail}
             title="Isometrics Fitness"
             buttonText="Send Email"
-            link="mailto:isometrics.fitness@gmail.com"
+            link="mailto:isometricsfitness@gmail.com"
             color="#4285F4"
             bgColor="#4285F4"
             lightBgColor="#4285F420"
