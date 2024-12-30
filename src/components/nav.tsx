@@ -20,7 +20,6 @@ const LINKS = [
 
 export function Nav() {
   const pathname = usePathname()
-  const isHome = pathname === "/" || pathname === "/home"
 
   return (
     <>
@@ -39,7 +38,7 @@ export function Nav() {
                 key={href}
                 href={href}
                 className={`px-4 py-2 rounded-md transition-colors ${
-                  (href === "/home" && isHome) || pathname === href
+                  pathname === href
                     ? "bg-white/10 text-white"
                     : "hover:bg-white/5 text-white/70 hover:text-white"
                 }`}
@@ -70,7 +69,7 @@ export function Nav() {
                     key={href}
                     href={href}
                     className={`px-4 py-2 rounded-md transition-colors ${
-                      (href === "/home" && isHome) || pathname === href
+                      pathname === href
                         ? "bg-white/10 text-white"
                         : "hover:bg-white/5 text-white/70 hover:text-white"
                     }`}

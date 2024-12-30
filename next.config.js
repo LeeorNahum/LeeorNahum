@@ -6,15 +6,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/',
-          destination: '/home',
-        },
-      ],
-    }
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/home',
+        permanent: true,
+      },
+    ]
   },
 }
 
