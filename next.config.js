@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: '/leeornahum.com/',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
