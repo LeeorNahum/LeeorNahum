@@ -6,15 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/leeornahum.com',
-        destination: '/leeornahum.com/',
-        permanent: true,
-      },
-    ]
-  },
+  skipTrailingSlashRedirect: true,
+  assetPrefix: '/leeornahum.com/',
 }
 
 module.exports = nextConfig 

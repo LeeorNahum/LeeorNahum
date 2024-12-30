@@ -27,7 +27,7 @@ export function Nav() {
       <nav className="fixed top-0 left-0 right-0 h-16 flex items-center justify-center z-50">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold px-4">
+          <Link href="/" className="text-xl font-bold px-4" scroll={false}>
             LN
           </Link>
 
@@ -37,6 +37,7 @@ export function Nav() {
               <Link
                 key={href}
                 href={href}
+                scroll={false}
                 className={`px-4 py-2 rounded-md transition-colors ${
                   pathname === href
                     ? "bg-white/10 text-white"
@@ -68,6 +69,7 @@ export function Nav() {
                   <Link
                     key={href}
                     href={href}
+                    scroll={false}
                     className={`px-4 py-2 rounded-md transition-colors ${
                       pathname === href
                         ? "bg-white/10 text-white"
