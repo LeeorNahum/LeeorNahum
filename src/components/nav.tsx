@@ -13,14 +13,13 @@ import {
 } from "@/components/ui/sheet"
 
 const LINKS = [
-  { href: "/", label: "Home" },
+  { href: "/home", label: "Home" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/skills", label: "Skills" },
 ]
 
 export function Nav() {
   const pathname = usePathname()
-  const isValidPath = LINKS.some(link => link.href === pathname)
 
   return (
     <>
@@ -28,7 +27,7 @@ export function Nav() {
       <nav className="fixed top-0 left-0 right-0 h-16 flex items-center justify-center z-50">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link href={isValidPath ? pathname : "/"} className="text-xl font-bold px-4">
+          <Link href="/home" className="text-xl font-bold px-4">
             LN
           </Link>
 
