@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
 import { ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 export default function Portfolio() {
   return (
@@ -69,6 +70,23 @@ export default function Portfolio() {
                 Open Projects in Notion <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
+            <div className="mt-8">
+              <a 
+                href="https://possible-baroness-8d5.notion.site/ee0e4ab0544b40c5a8c8d388481c26a2?v=12002633220480d8aadb000c8e4a68f0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-90 transition-opacity"
+              >
+                <Image
+                  src="/completed-projects.png"
+                  alt="Completed Projects"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg shadow-lg"
+                  priority
+                />
+              </a>
+            </div>
           </CardContent>
         </Card>
       </motion.section>
