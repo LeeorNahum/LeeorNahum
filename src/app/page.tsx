@@ -1,101 +1,195 @@
-import Image from "next/image";
+"use client"
+
+import { ContactLinkCard } from "@/components/contact-link-card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+import { Mail, Github, Linkedin, Code2, Cpu, Brain, Briefcase } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex min-h-screen flex-col items-center pb-16">
+      {/* Hero Section */}
+      <motion.section 
+        className="container flex flex-col items-center justify-center gap-6 pt-20 px-4 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+          Leeor Nahum
+        </h1>
+        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Electrical and Computer Engineer | Software Developer | Entrepreneur
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-5xl">
+          <ContactLinkCard
+            icon={Mail}
+            title="Gmail"
+            buttonText="Send Email"
+            link="mailto:leeor.nahum@gmail.com"
+            color="#EA4335"
+            bgColor="#EA4335"
+            lightBgColor="#EA433520"
+          />
+          <ContactLinkCard
+            icon={Github}
+            title="GitHub"
+            buttonText="Visit"
+            link="https://github.com/LeeorNahum"
+            color="#2DBA4E"
+            bgColor="#2DBA4E"
+            lightBgColor="#2DBA4E20"
+          />
+          <ContactLinkCard
+            icon={Mail}
+            title="Isometrics Fitness"
+            buttonText="Send Email"
+            link="mailto:isometrics.fitness@gmail.com"
+            color="#4285F4"
+            bgColor="#4285F4"
+            lightBgColor="#4285F420"
+          />
+          <ContactLinkCard
+            icon={Linkedin}
+            title="LinkedIn"
+            buttonText="Visit"
+            link="https://www.linkedin.com/in/leeor-nahum"
+            color="#0A66C2"
+            bgColor="#0A66C2"
+            lightBgColor="#0A66C220"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </motion.section>
+
+      <Separator className="my-12" />
+
+      {/* Expertise Section */}
+      <motion.section 
+        className="container px-4 space-y-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-2xl font-bold text-center sm:text-3xl">Areas of Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Cpu className="h-5 w-5" />
+                Electrical & Computer Engineering
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                <Badge>Embedded Programming</Badge>
+                <Badge>PCB Design</Badge>
+                <Badge>Hardware Design</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Code2 className="h-5 w-5" />
+                Computer Science
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                <Badge>Software Development</Badge>
+                <Badge>System Design</Badge>
+                <Badge>Algorithms</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Brain className="h-5 w-5" />
+                AI & Machine Learning
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                <Badge>Deep Learning</Badge>
+                <Badge>Neural Networks</Badge>
+                <Badge>Data Science</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Briefcase className="h-5 w-5" />
+                Entrepreneurship
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                <Badge>Business Development</Badge>
+                <Badge>Project Management</Badge>
+                <Badge>Leadership</Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </motion.section>
+
+      <Separator className="my-12" />
+
+      {/* Skills Section */}
+      <motion.section 
+        className="container px-4 space-y-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-2xl font-bold text-center sm:text-3xl">Skills & Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <Card>
+            <CardHeader>
+              <CardTitle>Technical Knowledge</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">1</Badge>
+                <span>Embedded Programming</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">2</Badge>
+                <span>PCB Design and Assembly</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Physical Abilities</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">1</Badge>
+                <span>Muscle-Up</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">2</Badge>
+                <span>7 minute plank</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">3</Badge>
+                <span>Rock Climbing/Bouldering</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </motion.section>
+    </main>
+  )
 }
