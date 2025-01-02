@@ -46,7 +46,7 @@ export default function Home() {
             icon={Mail}
             title="Isometrics Fitness"
             buttonText="Send Email"
-            link="mailto:isometricsfitness@gmail.com"
+            link="mailto:leeor@isometricsfitness.com"
             color="#4285F4"
             bgColor="#4285F4"
             lightBgColor="#4285F420"
@@ -55,7 +55,7 @@ export default function Home() {
             icon={Linkedin}
             title="LinkedIn"
             buttonText="Visit"
-            link="https://www.linkedin.com/in/leeor-nahum"
+            link="www.linkedin.com/in/leeornahumdotcom"
             color="#0A66C2"
             bgColor="#0A66C2"
             lightBgColor="#0A66C220"
@@ -84,9 +84,12 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                <Badge>Embedded Programming</Badge>
-                <Badge>PCB Design</Badge>
+                <Badge>Embedded Firmware Programming</Badge>
+                <Badge>Printed Circuit Board (PCB) Design and Assembly</Badge>
                 <Badge>Hardware Design</Badge>
+                <Badge>KiCAD</Badge>
+                <Badge>Autodesk Fusion 360</Badge>
+                <Badge>C++</Badge>
               </div>
             </CardContent>
           </Card>
@@ -160,11 +163,11 @@ export default function Home() {
             <CardContent className="space-y-2">
               <div className="flex items-center gap-2">
                 <Badge variant="outline">1</Badge>
-                <span>Embedded Programming</span>
+                <span>Embedded Firmware Programming</span>
               </div>
               <div className="flex items-center gap-2">
                 <Badge variant="outline">2</Badge>
-                <span>PCB Design and Assembly</span>
+                <span>Printed Circuit Board (PCB) Design and Assembly</span>
               </div>
             </CardContent>
           </Card>

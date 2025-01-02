@@ -23,11 +23,11 @@ export default function Skills() {
             <CardContent className="space-y-2">
               <div className="flex items-center gap-2">
                 <Badge variant="outline">1</Badge>
-                <span>Embedded Programming</span>
+                <span>Embedded Firmware Programming</span>
               </div>
               <div className="flex items-center gap-2">
                 <Badge variant="outline">2</Badge>
-                <span>PCB Design and Assembly</span>
+                <span>Printed Circuit Board (PCB) Design and Assembly</span>
               </div>
             </CardContent>
           </Card>
