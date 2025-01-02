@@ -81,8 +81,8 @@ export default function Portfolio() {
                   <Image
                     src="/completed-projects.png"
                     alt="Completed Projects"
-                    width={1200}
-                    height={800}
+                    width={1500}
+                    height={900}
                     className="rounded-lg shadow-lg w-full"
                     priority
                   />

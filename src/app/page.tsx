@@ -55,7 +55,7 @@ export default function Home() {
             icon={Linkedin}
             title="LinkedIn"
             buttonText="Visit"
-            link="www.linkedin.com/in/leeornahumdotcom"
+            link="https://www.linkedin.com/in/leeornahumdotcom"
             color="#0A66C2"
             bgColor="#0A66C2"
             lightBgColor="#0A66C220"
