@@ -63,7 +63,7 @@ export default function Portfolio() {
               className="gap-2"
             >
               <a 
-                href="https://possible-baroness-8d5.notion.site/ee0e4ab0544b40c5a8c8d388481c26a2"
+                href="https://www.notion.so/ee0e4ab0544b40c5a8c8d388481c26a2?v=1fb6f7657386497f8cfea6aad1aa7080"
                 target="_blank"
                 rel="noopener noreferrer"
               >
