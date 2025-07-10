@@ -129,16 +129,16 @@ export default function Home() {
     <div className={`${isDarkMode ? 'bg-[#09090b]' : 'bg-[#f4f4f6]'} relative min-h-screen w-full`}>
              {/* Top Navigation Bar */}
        <div
-         className={`backdrop-blur-[5px] backdrop-filter ${isDarkMode ? 'bg-[#09090b80]' : 'bg-[#f4f4f680]'} h-20 w-full sticky top-0 z-50`}
+         className={`backdrop-blur-[5px] backdrop-filter ${isDarkMode ? 'bg-[#09090b80]' : 'bg-[#f4f4f680]'} h-16 sm:h-20 w-full sticky top-0 z-50`}
          data-name="Top Bar"
          id="node-58_209"
        >
          <div className={`absolute ${isDarkMode ? 'border-b-[#3b3b3f]' : 'border-b-[#C0C0C4]'} border-b border-solid inset-x-0 bottom-0 h-px pointer-events-none`} />
          <div className="flex flex-row items-center relative size-full">
-           <div className="box-border content-stretch flex flex-row items-center justify-between px-3.5 py-4 relative size-full">
+           <div className="box-border content-stretch flex flex-row items-center justify-between px-2 sm:px-3.5 py-2 sm:py-4 relative size-full">
              <Link
                href="/"
-               className="relative shrink-0 size-12 cursor-pointer hover:opacity-80 transition-opacity duration-200"
+               className="relative shrink-0 size-10 sm:size-12 cursor-pointer hover:opacity-80 transition-opacity duration-200"
                data-name="Logo"
                id="node-6_10"
                aria-label="Go to homepage"
@@ -151,20 +151,20 @@ export default function Home() {
                  <div className={`w-full h-full ${isDarkMode ? 'bg-[#000000]' : 'bg-[#ffffff]'} rounded-full`} />
                </div>
                <div
-                 className={`absolute flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] left-1/2 not-italic size-9 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#0b0b0f]'} text-[24px] text-center top-1/2 translate-x-[-50%] translate-y-[-50%]`}
+                 className={`absolute flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] left-1/2 not-italic size-7 sm:size-9 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#0b0b0f]'} text-[20px] sm:text-[24px] text-center top-1/2 translate-x-[-50%] translate-y-[-50%]`}
                  id="node-6_8"
                >
                  <p className="block leading-[normal]">LN</p>
                </div>
              </Link>
              <div
-               className="box-border content-stretch flex flex-row gap-5 items-center justify-end p-0 relative shrink-0"
+               className="box-border content-stretch flex flex-row gap-2 sm:gap-5 items-center justify-end p-0 relative shrink-0"
                data-name="Right"
                id="node-59_256"
              >
                <button
                  onClick={toggleTheme}
-                 className="block cursor-pointer relative shrink-0 size-12"
+                 className="block cursor-pointer relative shrink-0 size-10 sm:size-12"
                  data-name="Theme Mode"
                  id="node-59_247"
                  aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
@@ -183,31 +183,31 @@ export default function Home() {
                        <Image 
                          src="/icons/LightMode.svg" 
                          alt="Light Mode" 
-                         width={24} 
-                         height={24} 
-                         className="w-full h-full object-contain brightness-0 invert" 
+                         width={20} 
+                         height={20} 
+                         className="w-full h-full object-contain brightness-0 invert sm:w-6 sm:h-6" 
                        />
                      </div>
                    </div>
                  ) : (
                    <div
-                     className="absolute left-0 size-12 top-0"
+                     className="absolute left-0 size-10 sm:size-12 top-0"
                      data-name="material-symbols:dark-mode"
                      id="node-59_228"
                    >
                      <Image 
                        src="/icons/DarkMode.svg" 
                        alt="Dark Mode" 
-                       width={48} 
-                       height={48} 
-                       className="w-full h-full object-contain brightness-0" 
+                       width={40} 
+                       height={40} 
+                       className="w-full h-full object-contain brightness-0 sm:w-12 sm:h-12" 
                      />
                    </div>
                  )}
                </button>
                <button
                  onClick={handleShare}
-                 className="relative shrink-0 size-12 cursor-pointer"
+                 className="relative shrink-0 size-10 sm:size-12 cursor-pointer"
                  data-name="Share"
                  id="node-25_101"
                  aria-label="Share this page"
@@ -232,9 +232,9 @@ export default function Home() {
                      <Image 
                        src="/icons/Share.svg" 
                        alt="Share" 
-                       width={24} 
-                       height={24} 
-                       className={`w-full h-full object-contain ${isDarkMode ? 'brightness-0' : 'brightness-0 invert'}`}
+                       width={20} 
+                       height={20} 
+                       className={`w-full h-full object-contain ${isDarkMode ? 'brightness-0' : 'brightness-0 invert'} sm:w-6 sm:h-6`}
                      />
                    </div>
                  </div>
@@ -245,24 +245,24 @@ export default function Home() {
        </div>
 
              {/* Main Content */}
-       <div className="flex flex-col gap-10 items-center justify-start px-0 py-10 mt-0">
+       <div className="flex flex-col gap-6 md:gap-10 items-center justify-start px-4 md:px-0 py-10 mt-0">
          {/* Hero Section */}
-         <div className="flex flex-col items-center gap-10">
-           <h1 className={`${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[88px] font-bold font-['Inter'] text-center leading-none`}>
+         <div className="flex flex-col items-center gap-6 md:gap-10">
+           <h1 className={`${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-5xl md:text-7xl lg:text-[88px] font-bold font-['Inter'] text-center leading-none`}>
              Leeor Nahum
            </h1>
            
-           <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364a]'} text-[24px] font-bold font-['Inter'] text-center leading-none`}>
+           <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364a]'} text-lg md:text-xl lg:text-2xl font-bold font-['Inter'] text-center leading-snug md:leading-normal`}>
              Electrical and Computer Engineer | Software Developer | Entrepreneur
            </p>
          </div>
 
                  {/* Contact Cards */}
-         <div className="[flex-flow:wrap] box-border content-center flex gap-[15px] items-center justify-center px-[15px] py-0 relative w-full">
+         <div className="[flex-flow:wrap] box-border content-center flex gap-[15px] items-center justify-center px-4 md:px-[15px] py-0 relative w-full">
            {/* Gmail Card */}
            <a 
              href="mailto:leeornahum@gmail.com"
-             className="h-[100px] relative shrink-0 w-[267px] cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Gmail" 
              id="node-22_695"
              aria-label="Send email to leeornahum@gmail.com"
@@ -352,7 +352,7 @@ export default function Home() {
              href="https://www.instagram.com/leeor_nahum/"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative shrink-0 w-[267px] cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Instagram" 
              id="node-22_713"
              aria-label="Visit Instagram profile"
@@ -446,7 +446,7 @@ export default function Home() {
              href="https://github.com/LeeorNahum"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative shrink-0 w-[267px] cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="GitHub" 
              id="node-22_749"
              aria-label="Visit GitHub profile"
@@ -534,7 +534,7 @@ export default function Home() {
              href="https://www.linkedin.com/in/leeornahumdotcom"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative shrink-0 w-[267px] cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="LinkedIn" 
              id="node-22_777"
              aria-label="Visit LinkedIn profile"
@@ -627,7 +627,7 @@ export default function Home() {
              href="https://isometricsfitness.com/"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative shrink-0 w-[267px] cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Isometrics Fitness" 
              id="node-22_906"
              aria-label="Visit Isometrics Fitness website"
@@ -710,10 +710,10 @@ export default function Home() {
            id="node-102_207"
          >
            <div
-             className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[36px] text-center text-nowrap`}
+             className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-3xl md:text-4xl lg:text-[36px] text-center`}
              id="node-102_205"
            >
-             <p className="block leading-[normal] whitespace-pre">
+             <p className="block leading-[normal]">
                Areas of Expertise
              </p>
            </div>
@@ -721,22 +721,22 @@ export default function Home() {
 
          {/* Skills Container */}
          <div
-           className="[flex-flow:wrap] box-border content-start flex gap-[50px] items-start justify-center p-0 relative w-full"
+           className="[flex-flow:wrap] box-border content-start flex gap-8 md:gap-[50px] items-start justify-center p-4 md:p-0 relative w-full"
            data-name="Skill Container"
            id="node-53_502"
          >
                      {/* Skills Card */}
            <div
-             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] shrink-0`}
+             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] w-full max-w-lg shrink-0`}
              data-name="Skill Card"
              id="node-50_143"
            >
              <div className={`absolute ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#C0C0C4]'} border border-solid inset-0 pointer-events-none rounded-[10px]`} />
              <div
-               className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] text-left text-nowrap tracking-[-0.48px]`}
+               className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] text-left tracking-[-0.48px]`}
                id="node-50_122"
              >
-               <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+               <p className="adjustLetterSpacing block leading-[normal]">
                  Skills
                </p>
              </div>
@@ -753,10 +753,10 @@ export default function Home() {
                  <div className="flex flex-row items-center justify-center relative size-full">
                    <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center p-[10px] relative size-full">
                      <div
-                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left text-nowrap tracking-[-0.36px]`}
+                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left tracking-[-0.36px]`}
                        id="node-I50_158-53_534"
                      >
-                       <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                       <p className="adjustLetterSpacing block leading-[normal]">
                          Circuit Board Design and Manufacturing
                        </p>
                      </div>
@@ -771,10 +771,10 @@ export default function Home() {
                  <div className="flex flex-row items-center justify-center relative size-full">
                    <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center p-[10px] relative size-full">
                      <div
-                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left text-nowrap tracking-[-0.36px]`}
+                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left tracking-[-0.36px]`}
                        id="node-I50_144-53_534"
                      >
-                       <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                       <p className="adjustLetterSpacing block leading-[normal]">
                          Embedded Firmware Programming
                        </p>
                      </div>
@@ -789,10 +789,10 @@ export default function Home() {
                  <div className="flex flex-row items-center justify-center relative size-full">
                    <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center p-[10px] relative size-full">
                      <div
-                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left text-nowrap tracking-[-0.36px]`}
+                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left tracking-[-0.36px]`}
                        id="node-I53_88-53_534"
                      >
-                       <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                       <p className="adjustLetterSpacing block leading-[normal]">
                          3D Printed Hardware Design
                        </p>
                      </div>
@@ -807,10 +807,10 @@ export default function Home() {
                  <div className="flex flex-row items-center justify-center relative size-full">
                    <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center p-[10px] relative size-full">
                      <div
-                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left text-nowrap tracking-[-0.36px]`}
+                       className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[18px] text-left tracking-[-0.36px]`}
                        id="node-I53_113-53_534"
                      >
-                       <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                       <p className="adjustLetterSpacing block leading-[normal]">
                          Web App Development
                        </p>
                      </div>
@@ -822,16 +822,16 @@ export default function Home() {
 
                      {/* Programming & Scripting Card */}
            <div
-             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] shrink-0`}
+             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] w-full max-w-lg shrink-0`}
              data-name="Skill Card"
              id="node-53_310"
            >
              <div className={`absolute ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#C0C0C4]'} border border-solid inset-0 pointer-events-none rounded-[10px]`} />
              <div
-               className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] text-left text-nowrap tracking-[-0.48px]`}
+               className={`flex flex-col font-mono font-bold justify-center leading-[0] relative shrink-0 ${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] text-left tracking-[-0.48px]`}
                id="node-53_311"
              >
-               <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">{`Programming & Scripting`}</p>
+               <p className="adjustLetterSpacing block leading-[normal]">{`Programming & Scripting`}</p>
              </div>
              <div
                className="[flex-flow:wrap] box-border content-start flex gap-2.5 items-start justify-start max-w-[450px] p-0 relative shrink-0"
@@ -993,7 +993,7 @@ export default function Home() {
 
                      {/* Dev Tools and Programs Card */}
            <div
-             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] shrink-0`}
+             className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 items-start justify-start min-h-[278px] p-[15px] relative rounded-[10px] w-full max-w-lg shrink-0`}
              data-name="Skill Card"
              id="node-53_406"
            >
@@ -1295,10 +1295,10 @@ export default function Home() {
            >
              <div className={`absolute ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#C0C0C4]'} border border-solid inset-0 pointer-events-none rounded-[10px]`} />
              <div
-               className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[36px] text-center text-nowrap`}
+               className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-2xl md:text-3xl lg:text-[36px] text-center`}
                id="node-102_214"
              >
-               <p className="block leading-[normal] whitespace-pre">
+               <p className="block leading-[normal]">
                  Project Portfolio
                </p>
              </div>
@@ -1322,20 +1322,20 @@ export default function Home() {
          </div>
 
          {/* Project Description */}
-                  <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] font-bold font-['Inter'] text-center max-w-4xl`}>
+                  <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-lg md:text-xl lg:text-2xl font-bold font-['Inter'] text-center max-w-4xl px-4 leading-snug md:leading-normal`}>
            Explore my complete portfolio of projects, including detailed descriptions, technologies used, and outcomes achieved.
          </p>
 
                  {/* Completed Projects Image */}
          <div
-           className="relative w-full"
+           className="relative w-full px-4"
            data-name="Completed Projects"
            id="node-90_209"
          >
            <div className="flex flex-row justify-center relative w-full">
-             <div className="box-border content-stretch flex flex-row gap-2.5 items-start justify-center p-[15px] relative w-full">
+             <div className="box-border content-stretch flex flex-row gap-2.5 items-start justify-center p-0 md:p-[15px] relative w-full">
                <div
-                 className="bg-center bg-cover bg-no-repeat h-[438px] rounded-[10px] shrink-0 w-[1136px]"
+                 className="bg-center bg-cover bg-no-repeat rounded-[10px] w-full max-w-[1136px] aspect-[1136/438]"
                  data-name="Completed Projects"
                  id="node-102_204"
                  style={{ backgroundImage: "url('/completed-projects.png')" }}
@@ -1365,10 +1365,10 @@ export default function Home() {
            >
              <div className={`absolute ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#C0C0C4]'} border border-solid inset-0 pointer-events-none rounded-[10px]`} />
              <div
-               className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[36px] text-center text-nowrap`}
+               className={`flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-2xl md:text-3xl lg:text-[36px] text-center`}
                id="node-102_214"
              >
-               <p className="block leading-[normal] whitespace-pre">
+               <p className="block leading-[normal]">
                  GitHub Activity
                </p>
              </div>
@@ -1392,7 +1392,7 @@ export default function Home() {
          </div>
 
          {/* GitHub Description */}
-                  <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-[24px] font-bold font-['Inter'] text-center`}>
+                  <p className={`${isDarkMode ? 'text-[#b5b5c9]' : 'text-[#36364A]'} text-lg md:text-xl lg:text-2xl font-bold font-['Inter'] text-center px-4 leading-snug md:leading-normal`}>
            View my code and contributions in software development
          </p>
 
@@ -1403,9 +1403,9 @@ export default function Home() {
            id="node-84_201"
          >
            <div className="flex flex-row items-center justify-center relative w-full">
-             <div className="[flex-flow:wrap] box-border content-center flex gap-10 items-center justify-center p-[15px] relative w-full">
+             <div className="[flex-flow:wrap] box-border content-center flex gap-10 items-center justify-center p-4 md:p-[15px] relative w-full">
                <div
-                 className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} h-[255px] rounded-[10px] shrink-0 w-full max-w-[613px]`}
+                 className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} h-auto md:h-[255px] rounded-[10px] shrink-0 w-full max-w-[613px]`}
                  data-name="metrics.classic"
                  id="node-84_199"
                >
@@ -1419,7 +1419,7 @@ export default function Home() {
                  />
                </div>
                <div
-                 className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 h-[238px] items-center justify-center p-0 relative rounded-[10px] shrink-0 w-full max-w-[613px]`}
+                 className={`${isDarkMode ? 'bg-[#202027]' : 'bg-[#d8d8df]'} box-border content-stretch flex flex-col gap-2.5 h-auto md:h-[238px] items-center justify-center p-0 relative rounded-[10px] shrink-0 w-full max-w-[613px]`}
                  data-name="Languages"
                  id="node-84_203"
                >
