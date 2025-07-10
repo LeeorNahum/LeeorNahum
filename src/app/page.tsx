@@ -84,13 +84,15 @@ export default function Home() {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+  
   const handleShare = async () => {
     const shareData = {
-      title: 'Share LeeorNahum.com',
+      title: "Share LeeorNahum.com",
       url: window.location.href,
     };
 
     try {
+      // Use Web Share API if supported
       if (navigator.share) {
         await navigator.share(shareData);
       } else {
@@ -101,6 +103,7 @@ export default function Home() {
       console.error('Error sharing:', error);
     }
   };
+  
   return (
     <div className={`${isDarkMode ? 'bg-[#09090b]' : 'bg-[#f4f4f6]'} relative min-h-screen w-full`}>
              {/* Top Navigation Bar */}
