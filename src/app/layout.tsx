@@ -16,16 +16,25 @@ export const metadata = {
   description: 'Electrical and Computer Engineer | Software Developer | Entrepreneur',
   metadataBase: new URL('https://leeornahum.com'),
   openGraph: {
-    title: 'Leeor Nahum - Portfolio',
+    title: 'Leeor Nahum',
     description: 'Electrical and Computer Engineer | Software Developer | Entrepreneur',
     url: 'https://leeornahum.com',
     siteName: 'Leeor Nahum',
     type: 'website',
+    images: [
+      {
+        url: '/preview-image.png', // Replace with your actual filename
+        width: 1200,
+        height: 630,
+        alt: 'Leeor Nahum - Electrical and Computer Engineer | Software Developer | Entrepreneur',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Leeor Nahum',
     description: 'Electrical and Computer Engineer | Software Developer | Entrepreneur',
+    images: ['/preview-image.png'], // Replace with your actual filename
   },
 }
 
