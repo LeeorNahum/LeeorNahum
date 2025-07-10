@@ -86,59 +86,35 @@ export default function Home() {
   };
   const handleShare = async () => {
     const shareData = {
-      title: 'Leeor Nahum',
-      text: 'Electrical and Computer Engineer | Software Developer | Entrepreneur',
+      title: 'Share LeeorNahum.com',
       url: window.location.href,
     };
 
     try {
-      // Check if Web Share API is supported
       if (navigator.share) {
-        // Use canShare if available (newer browsers)
-        if (navigator.canShare && navigator.canShare(shareData)) {
-          await navigator.share(shareData);
-          return;
-        }
-        // For older browsers that support share but not canShare
-        else if (!navigator.canShare) {
-          await navigator.share(shareData);
-          return;
-        }
+        await navigator.share(shareData);
+      } else {
+        // Simple fallback: copy URL to clipboard
+        await navigator.clipboard.writeText(window.location.href);
       }
-      
-      // Fallback: copy URL to clipboard
-      await navigator.clipboard.writeText(window.location.href);
-      alert('URL copied to clipboard!');
     } catch (error) {
       console.error('Error sharing:', error);
-      
-      // Final fallback: copy URL to clipboard
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-        alert('URL copied to clipboard!');
-      } catch (clipboardError) {
-        console.error('Error copying to clipboard:', clipboardError);
-        
-        // Ultimate fallback: show URL for manual copying
-        const url = window.location.href;
-        prompt('Please copy this URL manually:', url);
-      }
     }
   };
   return (
     <div className={`${isDarkMode ? 'bg-[#09090b]' : 'bg-[#f4f4f6]'} relative min-h-screen w-full`}>
              {/* Top Navigation Bar */}
        <div
-         className={`backdrop-blur-[5px] backdrop-filter ${isDarkMode ? 'bg-[#09090b80]' : 'bg-[#f4f4f680]'} h-16 sm:h-20 w-full sticky top-0 z-50`}
+         className={`backdrop-blur-[5px] backdrop-filter ${isDarkMode ? 'bg-[#09090b80]' : 'bg-[#f4f4f680]'} h-[72px] sm:h-20 w-full sticky top-0 z-50`}
          data-name="Top Bar"
          id="node-58_209"
        >
          <div className={`absolute ${isDarkMode ? 'border-b-[#3b3b3f]' : 'border-b-[#C0C0C4]'} border-b border-solid inset-x-0 bottom-0 h-px pointer-events-none`} />
          <div className="flex flex-row items-center relative size-full">
-           <div className="box-border content-stretch flex flex-row items-center justify-between px-2 sm:px-3.5 py-2 sm:py-4 relative size-full">
+           <div className="box-border content-stretch flex flex-row items-center justify-between px-3 sm:px-3.5 py-3 sm:py-4 relative size-full">
              <Link
                href="/"
-               className="relative shrink-0 size-10 sm:size-12 cursor-pointer hover:opacity-80 transition-opacity duration-200"
+               className="relative shrink-0 size-11 sm:size-12 cursor-pointer hover:opacity-80 transition-opacity duration-200"
                data-name="Logo"
                id="node-6_10"
                aria-label="Go to homepage"
@@ -151,20 +127,20 @@ export default function Home() {
                  <div className={`w-full h-full ${isDarkMode ? 'bg-[#000000]' : 'bg-[#ffffff]'} rounded-full`} />
                </div>
                <div
-                 className={`absolute flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] left-1/2 not-italic size-7 sm:size-9 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#0b0b0f]'} text-[20px] sm:text-[24px] text-center top-1/2 translate-x-[-50%] translate-y-[-50%]`}
+                 className={`absolute flex flex-col font-['Inter:Bold',_sans-serif] font-bold justify-center leading-[0] left-1/2 not-italic size-8 sm:size-9 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#0b0b0f]'} text-[22px] sm:text-[24px] text-center top-1/2 translate-x-[-50%] translate-y-[-50%]`}
                  id="node-6_8"
                >
                  <p className="block leading-[normal]">LN</p>
                </div>
              </Link>
              <div
-               className="box-border content-stretch flex flex-row gap-2 sm:gap-5 items-center justify-end p-0 relative shrink-0"
+               className="box-border content-stretch flex flex-row gap-3 sm:gap-5 items-center justify-end p-0 relative shrink-0"
                data-name="Right"
                id="node-59_256"
              >
                <button
                  onClick={toggleTheme}
-                 className="block cursor-pointer relative shrink-0 size-10 sm:size-12"
+                 className="block cursor-pointer relative shrink-0 size-12"
                  data-name="Theme Mode"
                  id="node-59_247"
                  aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
@@ -183,31 +159,31 @@ export default function Home() {
                        <Image 
                          src="/icons/LightMode.svg" 
                          alt="Light Mode" 
-                         width={20} 
-                         height={20} 
-                         className="w-full h-full object-contain brightness-0 invert sm:w-6 sm:h-6" 
+                         width={24} 
+                         height={24} 
+                         className="w-full h-full object-contain brightness-0 invert" 
                        />
                      </div>
                    </div>
                  ) : (
                    <div
-                     className="absolute left-0 size-10 sm:size-12 top-0"
+                     className="absolute left-0 size-12 top-0"
                      data-name="material-symbols:dark-mode"
                      id="node-59_228"
                    >
                      <Image 
                        src="/icons/DarkMode.svg" 
                        alt="Dark Mode" 
-                       width={40} 
-                       height={40} 
-                       className="w-full h-full object-contain brightness-0 sm:w-12 sm:h-12" 
+                       width={48} 
+                       height={48} 
+                       className="w-full h-full object-contain brightness-0" 
                      />
                    </div>
                  )}
                </button>
                <button
                  onClick={handleShare}
-                 className="relative shrink-0 size-10 sm:size-12 cursor-pointer"
+                 className="relative shrink-0 size-12 cursor-pointer"
                  data-name="Share"
                  id="node-25_101"
                  aria-label="Share this page"
@@ -232,9 +208,9 @@ export default function Home() {
                      <Image 
                        src="/icons/Share.svg" 
                        alt="Share" 
-                       width={20} 
-                       height={20} 
-                       className={`w-full h-full object-contain ${isDarkMode ? 'brightness-0' : 'brightness-0 invert'} sm:w-6 sm:h-6`}
+                       width={24} 
+                       height={24} 
+                       className={`w-full h-full object-contain ${isDarkMode ? 'brightness-0' : 'brightness-0 invert'}`}
                      />
                    </div>
                  </div>
@@ -262,7 +238,7 @@ export default function Home() {
            {/* Gmail Card */}
            <a 
              href="mailto:leeornahum@gmail.com"
-             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Gmail" 
              id="node-22_695"
              aria-label="Send email to leeornahum@gmail.com"
@@ -352,7 +328,7 @@ export default function Home() {
              href="https://www.instagram.com/leeor_nahum/"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Instagram" 
              id="node-22_713"
              aria-label="Visit Instagram profile"
@@ -446,7 +422,7 @@ export default function Home() {
              href="https://github.com/LeeorNahum"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="GitHub" 
              id="node-22_749"
              aria-label="Visit GitHub profile"
@@ -534,7 +510,7 @@ export default function Home() {
              href="https://www.linkedin.com/in/leeornahumdotcom"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="LinkedIn" 
              id="node-22_777"
              aria-label="Visit LinkedIn profile"
@@ -627,7 +603,7 @@ export default function Home() {
              href="https://isometricsfitness.com/"
              target="_blank"
              rel="noopener noreferrer"
-             className="h-[100px] relative w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+             className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
              data-name="Isometrics Fitness" 
              id="node-22_906"
              aria-label="Visit Isometrics Fitness website"
