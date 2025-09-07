@@ -556,7 +556,7 @@ export default function Home() {
                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <g clipPath="url(#clip0_22_114)">
                      <g clipPath="url(#clip1_22_114)">
-                       <path d="M30.6736 30.6742H25.3396V22.3207C25.3396 20.3287 25.304 17.7644 22.5653 17.7644C19.7871 17.7644 19.362 19.9348 19.362 22.1757V30.6736H14.0281V13.4954H19.1487V15.843H19.2204C19.7329 14.9668 20.4734 14.246 21.3631 13.7574C22.2528 13.2687 23.2584 13.0305 24.2728 13.0681C29.6791 13.0681 30.6759 16.6242 30.6759 21.2505L30.6736 30.6742ZM8.00937 11.1474C6.2998 11.1477 4.91366 9.762 4.91337 8.05242C4.91309 6.34284 6.29867 4.9567 8.00825 4.95642C9.71783 4.956 11.104 6.34171 11.1042 8.05129C11.1044 8.87227 10.7784 9.65968 10.198 10.2403C9.61763 10.8209 8.83035 11.1472 8.00937 11.1474ZM10.6765 30.6743H5.3368V13.4954H10.6763L10.6765 30.6743ZM33.3328 0.00262011H2.65648C1.20664 -0.0136924 0.0176558 1.14773 -6.29425e-05 2.59757V33.4019C0.0170933 34.8524 1.20594 36.015 2.65634 35.9998H33.3328C34.7863 36.0178 35.9798 34.8553 35.9999 33.4019V2.59518C35.9793 1.14253 34.7856 -0.0187549 33.3328 0.000229485" fill={isDarkMode ? '#FFFFFF' : '#0A66C2'}/>
+                       <path d="M30.6736 30.6742H25.3396V22.3207C25.3396 20.3287 25.304 17.7644 22.5653 17.7644C19.7871 17.7644 19.362 19.9348 19.362 22.1757V30.6736H14.0281V13.4954H19.1487V15.843H19.2204C19.7329 14.9668 20.4734 14.246 21.3631 13.7574C22.2528 13.2687 23.2584 13.0305 24.2728 13.0681C29.6791 13.0681 30.6759 16.6242 30.6759 21.2505L30.6736 30.6742ZM8.00937 11.1474C6.2998 11.1477 4.91366 9.762 4.91337 8.05242C4.91309 6.34284 6.29867 4.9567 8.00825 4.95642C9.71783 4.956 11.104 6.34171 11.1042 8.05129C11.1044 8.87227 10.7784 9.65968 10.198 10.2403C9.61763 10.8209 8.83035 11.1472 8.00937 11.1474ZM10.6765 30.6743H5.3368V13.4954H10.6763L10.6765 30.6743ZM33.3328 0.00262011H2.65648C1.20664 -0.0136924 0.0176558 1.14773 -6.29425e-05 2.59757V33.4019C0.0170933 34.8524 1.20594 36.015 2.65634 35.9998H33.3328C34.7863 36.0178 35.9798 34.8553 35.9999 33.4019V2.59518C35.9793 1.14253 34.7856 -0.0187549 33.3328 0.000229485" fill="#0A66C2"/>
                      </g>
                    </g>
                    <defs>
@@ -675,6 +675,96 @@ export default function Home() {
                </div>
              </div>
            </a>
+          
+          {/* MouveMouse Card */}
+          <a 
+            href="https://mouvemouse.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+            data-name="MouveMouse" 
+            id="node-22_950"
+            aria-label="Visit MouveMouse website"
+          >
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Background"
+              id="node-I22_950-21_159"
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #2E445E 0%, #12A4A4 100%)",
+              }}
+            />
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Background 2"
+              id="node-I22_950-22_632"
+            />
+            <div
+              className={`absolute ${isDarkMode ? 'bg-[#000000]' : 'bg-[#ffffff]'} inset-0 opacity-[0.65] rounded-[10px]`}
+              data-name="Darken Background"
+              id="node-I22_950-21_160"
+            >
+              <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-0 pointer-events-none rounded-[10px]`} />
+            </div>
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Card Border"
+              id="node-I22_950-22_30"
+            >
+              <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-0 pointer-events-none rounded-[10px]`} />
+            </div>
+            <div
+              className={`absolute flex flex-col font-mono font-bold justify-center leading-[0] right-5 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[18px] text-nowrap text-right top-[25px] tracking-[-0.36px] translate-y-[-50%]`}
+              id="node-I22_950-21_164"
+            >
+              <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                MouveMouse
+              </p>
+            </div>
+            <div
+              className="absolute box-border content-stretch flex flex-col gap-2.5 items-center justify-center left-5 overflow-clip p-0 size-9 top-[7px]"
+              data-name="ContactLinkCardIcon"
+              id="node-I22_950-22_634"
+            >
+              <div
+                className="overflow-clip relative shrink-0 size-9"
+                data-name="mouvemouse-icon"
+                id="node-22_951"
+              >
+                <Image src="/icons/MouveMouse.svg" alt="MouveMouse" width={36} height={36} className="w-full h-full object-contain" />
+              </div>
+            </div>
+            <div
+              className="absolute contents left-[8.9px] top-[50px]"
+              data-name="Button"
+              id="node-I22_950-22_631"
+            >
+              <div
+                className={`absolute ${isDarkMode ? 'bg-[#ffffff]' : 'bg-[#000000]'} bottom-[10%] left-[3.333%] mix-blend-overlay opacity-75 right-[3.333%] rounded-[10px] top-1/2`}
+                data-name="Button"
+                id="node-I22_950-21_162"
+              >
+                <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-[-1px] pointer-events-none rounded-[11px]`} />
+              </div>
+              <div
+                className="absolute bottom-[10%] left-[3.333%] right-[3.333%] rounded-[10px] top-1/2"
+                data-name="Button Border"
+                id="node-I22_950-22_32"
+              >
+                <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-[-1px] pointer-events-none rounded-[11px]`} />
+              </div>
+              <div
+                className={`absolute bottom-[19%] flex flex-col font-mono font-bold justify-center leading-[0] ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[18px] text-center text-nowrap top-[57%] tracking-[-0.36px] translate-x-[-50%]`}
+                id="node-I22_950-21_163"
+                style={{ left: "calc(50% - 0.500002px)" }}
+              >
+                <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                  Visit
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
 
         {/* Separator */}
