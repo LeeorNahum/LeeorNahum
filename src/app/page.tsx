@@ -765,6 +765,96 @@ export default function Home() {
               </div>
             </div>
           </a>
+
+          {/* LaundryIQ Card */}
+          <a 
+            href="https://laundryiq.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-[100px] relative w-[85%] sm:w-full max-w-[267px] shrink-0 cursor-pointer hover:scale-105 transition-transform duration-200" 
+            data-name="LaundryIQ" 
+            id="node-22_990"
+            aria-label="Visit LaundryIQ website"
+          >
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Background"
+              id="node-I22_990-21_159"
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #0DA6E7 0%, #06CBD5 100%)",
+              }}
+            />
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Background 2"
+              id="node-I22_990-22_632"
+            />
+            <div
+              className={`absolute ${isDarkMode ? 'bg-[#000000]' : 'bg-[#ffffff]'} inset-0 opacity-[0.65] rounded-[10px]`}
+              data-name="Darken Background"
+              id="node-I22_990-21_160"
+            >
+              <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-0 pointer-events-none rounded-[10px]`} />
+            </div>
+            <div
+              className="absolute inset-0 rounded-[10px]"
+              data-name="Card Border"
+              id="node-I22_990-22_30"
+            >
+              <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-0 pointer-events-none rounded-[10px]`} />
+            </div>
+            <div
+              className={`absolute flex flex-col font-mono font-bold justify-center leading-[0] right-5 ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[18px] text-nowrap text-right top-[25px] tracking-[-0.36px] translate-y-[-50%]`}
+              id="node-I22_990-21_164"
+            >
+              <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                LaundryIQ
+              </p>
+            </div>
+            <div
+              className="absolute box-border content-stretch flex flex-col gap-2.5 items-center justify-center left-5 overflow-clip p-0 size-9 top-[7px]"
+              data-name="ContactLinkCardIcon"
+              id="node-I22_990-22_634"
+            >
+              <div
+                className="overflow-clip relative shrink-0 size-9"
+                data-name="laundryiq-icon"
+                id="node-22_991"
+              >
+                <Image src="/icons/LaundryIQ.svg" alt="LaundryIQ" width={36} height={36} className="w-full h-full object-contain" />
+              </div>
+            </div>
+            <div
+              className="absolute contents left-[8.9px] top-[50px]"
+              data-name="Button"
+              id="node-I22_990-22_631"
+            >
+              <div
+                className={`absolute ${isDarkMode ? 'bg-[#ffffff]' : 'bg-[#000000]'} bottom-[10%] left-[3.333%] mix-blend-overlay opacity-75 right-[3.333%] rounded-[10px] top-1/2`}
+                data-name="Button"
+                id="node-I22_990-21_162"
+              >
+                <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-[-1px] pointer-events-none rounded-[11px]`} />
+              </div>
+              <div
+                className="absolute bottom-[10%] left-[3.333%] right-[3.333%] rounded-[10px] top-1/2"
+                data-name="Button Border"
+                id="node-I22_990-22_32"
+              >
+                <div className={`absolute border ${isDarkMode ? 'border-[#3b3b3f]' : 'border-[#c0c0c4]'} border-solid inset-[-1px] pointer-events-none rounded-[11px]`} />
+              </div>
+              <div
+                className={`absolute bottom-[19%] flex flex-col font-mono font-bold justify-center leading-[0] ${isDarkMode ? 'text-[#f0f0f4]' : 'text-[#0b0b0f]'} text-[18px] text-center text-nowrap top-[57%] tracking-[-0.36px] translate-x-[-50%]`}
+                id="node-I22_990-21_163"
+                style={{ left: "calc(50% - 0.500002px)" }}
+              >
+                <p className="adjustLetterSpacing block leading-[normal] whitespace-pre">
+                  Visit
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
 
         {/* Separator */}
